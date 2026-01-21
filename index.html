@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
-            font-size: 16px; /* Updated base font size */
+            font-size: 16px; /* Base font size 16px */
         }
         .section-card {
             background: white;
@@ -47,6 +47,7 @@
         .incorrect { color: #dc2626; font-weight: bold; }
         .feedback { font-size: 12px; margin-left: 0.5rem; }
         
+        /* Input styles: Dark blue filled text, no underline for labels */
         input[type="text"] {
             border-bottom: 1px solid #94a3b8;
             background: transparent;
@@ -60,7 +61,7 @@
         }
         
         /* Font size for headers and questions (18px, bold, no underline) */
-        .question-text, .section-title, h3.title-styled {
+        .question-text, .section-title, .title-styled {
             font-size: 18px;
             font-weight: bold;
             text-decoration: none !important;
@@ -248,7 +249,7 @@
 
             <p class="italic mb-4 text-slate-600 font-medium bg-slate-100 p-2 rounded">Questions 21-26: Choose the correct letter, A, B or C.</p>
             
-            <div class="space-y-6">
+            <div class="space-y-6 text-sm">
                 <div class="question-block">
                     <p class="question-text">21. Why did Leo choose instant coffee as the topic for his marketing report?</p>
                     <div class="flex flex-col gap-2 ml-4 mt-2">
@@ -319,8 +320,8 @@
                     <li><span class="question-text">Implementation</span>: 
                         <ul class="list-disc ml-6 space-y-4 mb-8">
                             <li>Practical solutions to problems.</li>
-                            <li>Include details such as participants, 29. <input type="text" id="q29" class="w-40 px-1 text-center"> and sequence. <span id="res29" class="feedback"></span> </li>
-                            <li>Section is often poorly done because of lack of 30. <input type="text" id="q30" class="w-40 px-1 text-center"> <span id="res30" class="feedback"></span></li></ul>
+                            <li>Include details such as participants, 29. <input type="text" id="q29" class="w-40 px-1 text-center"> and sequence. <span id="res29" class="feedback"></span></li>
+                            <li>Section is often poorly done because of lack of 30. <input type="text" id="q30" class="w-40 px-1 text-center"><span id="res30" class="feedback"></span></li></ul>
                     <li><span class="question-text">Conclusion</span>:
                     <ul class="list-disc ml-6 space-y-4 mb-8">
                         <li>Don't use new material here.</li>
@@ -369,7 +370,7 @@
 
                 <p class="mb-4 font-semibold text-slate-700">Benefits of Zumba:</p>
                 <p class="mb-6 text-slate-700">A study at The University of Wisconsin showed that doing Zumba for 40 minutes uses up as many (38) <input type="text" id="q38" class="w-32 px-1 text-center"> as other quite intense forms of exercise <span id="res38" class="feedback"></span>.</p>
-                <p class="mb-6 text-slate-700">The American Journal of Health Behavior study showed that:</p>
+                <p class="mb-6 font-slate-700">The American Journal of Health Behavior study showed that:</p>
                 <ul class="list-disc ml-6 space-y-3">
                     <li>women suffering from (39) <input type="text" id="q39" class="w-32 px-1 text-center"> benefited from doing Zumba. <span id="res39" class="feedback"></span></li>
                     <li>Zumba became a (40) <input type="text" id="q40" class="w-32 px-1 text-center"> for the participants. <span id="res40" class="feedback"></span></li>
@@ -389,16 +390,17 @@
 
     <script>
         const ANSWERS = {
-            q1: "age", q2: "21.50", q3: "2", q4: "parking", q5: "argentina", q6: "singing",
+            q1: "age", q2: "21.50", q3: "2", q4: "parking", q5: "Argentina", q6: "singing",
             q7: "piano", q8: "1922", q9: "comedy", q10: "talk",
             q11: "D", q12: "C", q13: "G", q14: "H", q15: "A", q16: "E",
             "q17-18": ["A", "D"], "q19-20": ["A", "C"],
             q21: "A", q22: "B", q23: "A", q24: "B", q25: "A", q26: "A", 
-            q27: "background", q28: "theory", q29: "cost"or"costs", q30: "time",
+            q27: "background", q28: "theory", q29: "cost", q30: "time",
             q31: "creativity", q32: "therapy", q33: "fitness", q34: "balance", q35: "stone",
             q36: "motivation", q37: "isolation", q38: "calories", q39: "obesity", q40: "habit"
         };
 
+        // Added/Ensured Alternate answers for Q29
         const ALTERNATE_ANSWERS = {
             q29: ["cost", "costs"]
         };
@@ -408,8 +410,10 @@
             const total = 40;
 
             document.querySelectorAll('.feedback').forEach(el => {
-                el.innerHTML = '';
-                el.className = 'feedback';
+                if (el) {
+                    el.innerHTML = '';
+                    el.className = 'feedback';
+                }
             });
 
             for (let i = 1; i <= 40; i++) {
@@ -419,7 +423,7 @@
                 if (!input) continue;
 
                 let userVal = input.value.trim().toLowerCase();
-                let correctVal = ANSWERS['q' + i].toLowerCase();
+                let correctVal = ANSWERS['q' + i] ? ANSWERS['q' + i].toLowerCase() : "";
                 let display = document.getElementById('res' + i);
 
                 if (!display) continue;
