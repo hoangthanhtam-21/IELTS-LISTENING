@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Listening Practice - Cumulative Test 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-size: 16px; /* Updated base font size */
+        }
+        .section-card {
+            background: white;
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            border: 1px solid #e5e7eb;
+        }
+        .audio-link-container {
+            background: #eff6ff;
+            padding: 1.25rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1.5rem;
+            border: 1px dashed #3b82f6;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .btn-listen {
+            background-color: #1e40af;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .btn-listen:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .correct { color: #059669; font-weight: bold; }
+        .incorrect { color: #dc2626; font-weight: bold; }
+        .feedback { font-size: 12px; margin-left: 0.5rem; }
+        
+        input[type="text"] {
+            border-bottom: 1px solid #94a3b8;
+            background: transparent;
+            outline: none;
+            color: #1e3a8a; 
+            font-weight: 600;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus {
+            border-bottom: 2px solid #3b82f6;
+        }
+        
+        /* Font size for headers and questions (18px, bold, no underline) */
+        .question-text, .section-title, h3.title-styled {
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen pb-20 text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-blue-800 text-white p-6 shadow-md mb-8">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-3xl font-bold">CUMULATIVE LISTENING TEST 2</h1>
+            <p class="mt-2 text-blue-100 italic">IELTS Listening Practice - Automatic Scoring</p>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4">
+        
+        <!-- SECTION 1 -->
+        <section class="section-card">
+            <h2 class="section-title text-blue-700 mb-4 border-b pb-2 text-center md:text-left">SECTION 1 (Questions 1-10)</h2>
+            
+            <div class="audio-link-container flex-col sm:flex-row gap-4">
+                <div>
+                    <p class="font-bold text-blue-900">Section 1 Audio File</p>
+                    <p class="text-xs text-blue-600 italic">Click the button to open the audio file in a new tab.</p>
+                </div>
+                <a href="https://1drv.ms/u/c/f7a325f56fbe0245/IQD8-IYiklcWRpQU3Z_b8LeUAXtP941ZqOqhGNcZgJF6IDo?e=m2KqSW" target="_blank" class="btn-listen">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Open Section 1 Audio
+                </a>
+            </div>
+
+            <p class="italic mb-6 text-slate-600 font-medium bg-slate-100 p-2 rounded">Complete the notes below. Write NO MORE THAN ONE WORD AND/OR A NUMBER for each answer.</p>
+            
+            <div class="bg-blue-50/50 p-6 rounded-lg border border-blue-100">
+                <h3 class="title-styled text-center mb-4">Film Club</h3>
+                <div class="space-y-4">
+                    <p class="font-bold">Membership information</p>
+                    <ul class="list-disc ml-6 space-y-3">
+                        <li>Club meets every 2 weeks</li>
+                        <li>No (1) <input type="text" id="q1" class="w-32 px-1 text-center"> limit <span id="res1" class="feedback"></span></li>
+                        <li>Student membership costs (2) £<input type="text" id="q2" class="w-24 px-1 text-center"> per season <span id="res2" class="feedback"></span></li>
+                        <li>Members get:
+                            <ul class="list-circle ml-6 mt-1">
+                                <li>free entry to club films</li>
+                                <li>(3) £<input type="text" id="q3" class="w-24 px-1 text-center"> reduction on other films at cinema <span id="res3" class="feedback"></span></li>
+                            </ul>
+                        </li>
+                        <li>Members are entitled to 3 hours’ free (4) <input type="text" id="q4" class="w-40 px-1 text-center"> <span id="res4" class="feedback"></span></li>
+                    </ul>
+
+                    <p class="font-bold mt-4">Films to be shown:</p>
+                    <p><span class="question-text">Oct 14: Pablo</span></p>
+                    <ul class="list-disc ml-6">
+                        <li>about a child in (5) <input type="text" id="q5" class="w-32 px-1 text-center"> who runs away from home <span id="res5" class="feedback"></span></li>
+                        <li>and wins a (6) <input type="text" id="q6" class="w-32 px-1 text-center"> competition on TV <span id="res6" class="feedback"></span></li>
+                    </ul>
+
+                    <p><span class="question-text">Oct 28: The Soldier</span></p>
+                    <ul class="list-disc ml-6">
+                        <li>with live (7) <input type="text" id="q7" class="w-32 px-1 text-center"> accompaniment <span id="res7" class="feedback"></span></li>
+                        <li>made in the year (8) <input type="text" id="q8" class="w-24 px-1 text-center"> <span id="res8" class="feedback"></span></li>
+                        <li>type of film: a (9) <input type="text" id="q9" class="w-32 px-1 text-center"> <span id="res9" class="feedback"></span></li>
+                    </ul>
+
+                    <p><span class="question-text">Nov 11: Tiger</span></p>
+                    <ul class="list-disc ml-6">
+                        <li>cartoon aimed at adults</li>
+                        <li>followed by a (10) <input type="text" id="q10" class="w-32 px-1 text-center"> by the director <span id="res10" class="feedback"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2 -->
+        <section class="section-card">
+            <h2 class="section-title text-blue-700 mb-4 border-b pb-2 text-center md:text-left">SECTION 2 (Questions 11-20)</h2>
+            
+            <div class="audio-link-container flex-col sm:flex-row gap-4">
+                <div>
+                    <p class="font-bold text-blue-900">Section 2 Audio File</p>
+                    <p class="text-xs text-blue-600 italic">Click the button to open the audio file in a new tab.</p>
+                </div>
+                <a href="https://1drv.ms/u/c/f7a325f56fbe0245/IQD0cNZrltPCSrC3oyp1YD6PATr0IhOQsJsMW5nl9bYjtkI?e=lgUWJh" target="_blank" class="btn-listen">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Open Section 2 Audio
+                </a>
+            </div>
+
+            <p class="italic mb-4 text-slate-600 font-medium bg-slate-100 p-2 rounded">Questions 11-16: Label the map below. Write the correct letters A-H next to questions 11-16.</p>
+            
+            <div class="bg-gray-50 p-4 rounded-lg flex flex-col items-center mb-6">
+                <div class="w-full max-w-lg mb-4 flex justify-center">
+                    <img src="https://drive.google.com/thumbnail?id=15gyavFJ4CU0w2so5Nt6Xk8PlaKPnI65b&sz=w1000" alt="" class="max-w-full h-auto rounded shadow-sm border" onerror="this.onerror=null; this.src='https://placehold.co/600x400?text=Map+Link+Error+-+Check+Drive+Permissions';">
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
+                    <div class="flex items-center justify-between bg-white p-3 rounded shadow-sm border">
+                        <span class="question-text">11. Café:</span>
+                        <div>
+                            <input type="text" id="q11" class="border border-slate-300 rounded px-2 py-1 w-16 text-center uppercase">
+                            <span id="res11" class="feedback"></span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between bg-white p-3 rounded shadow-sm border">
+                        <span class="question-text">12. Toilets:</span>
+                        <div>
+                            <input type="text" id="q12" class="border border-slate-300 rounded px-2 py-1 w-16 text-center uppercase">
+                            <span id="res12" class="feedback"></span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between bg-white p-3 rounded shadow-sm border">
+                        <span class="question-text">13. Formal gardens:</span>
+                        <div>
+                            <input type="text" id="q13" class="border border-slate-300 rounded px-2 py-1 w-16 text-center uppercase">
+                            <span id="res13" class="feedback"></span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between bg-white p-3 rounded shadow-sm border">
+                        <span class="question-text">14. Outdoor gyms:</span>
+                        <div>
+                            <input type="text" id="q14" class="border border-slate-300 rounded px-2 py-1 w-16 text-center uppercase">
+                            <span id="res14" class="feedback"></span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between bg-white p-3 rounded shadow-sm border">
+                        <span class="question-text">15. Skateboard ramp:</span>
+                        <div>
+                            <input type="text" id="q15" class="border border-slate-300 rounded px-2 py-1 w-16 text-center uppercase">
+                            <span id="res15" class="feedback"></span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between bg-white p-3 rounded shadow-sm border">
+                        <span class="question-text">16. Wild flowers:</span>
+                        <div>
+                            <input type="text" id="q16" class="border border-slate-300 rounded px-2 py-1 w-16 text-center uppercase">
+                            <span id="res16" class="feedback"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div>
+                    <p class="italic mb-2 text-slate-600 font-medium">Questions 17-18: Choose TWO letters A-E. What does the speaker say about the adventure playground?</p>
+                    <div class="grid grid-cols-1 gap-2 bg-gray-50 p-4 rounded border">
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q17-18" value="A"> A. children must be supervised</label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q17-18" value="B"> B. it costs more in winter</label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q17-18" value="C"> C. some activities are only for younger children</label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q17-18" value="D"> D. no payment is required</label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q17-18" value="E"> E. it was recently expanded</label>
+                    </div>
+                    <div id="res17-18" class="feedback mt-2"></div>
+                </div>
+
+                <div>
+                    <p class="italic mb-2 text-slate-600 font-medium">Questions 19-20: Choose TWO letters A-E. What does the speaker say about the glass houses?</p>
+                    <div class="grid grid-cols-1 gap-2 bg-gray-50 p-4 rounded border">
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q19-20" value="A"> A. they are closed at weekends</label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q19-20" value="B"> B. volunteers are needed to work there</label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q19-20" value="C"> C. they were badly damaged by fire</label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q19-20" value="D"> D. more money is needed to repair some of the glass</label>
+                        <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="q19-20" value="E"> E. visitors can see palm trees from tropical regions</label>
+                    </div>
+                    <div id="res19-20" class="feedback mt-2"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3 -->
+        <section class="section-card">
+            <h2 class="section-title text-blue-700 mb-4 border-b pb-2 text-center md:text-left">SECTION 3 (Questions 21-30)</h2>
+            
+            <div class="audio-link-container flex-col sm:flex-row gap-4">
+                <div>
+                    <p class="font-bold text-blue-900">Section 3 Audio File</p>
+                    <p class="text-xs text-blue-600 italic">Click the button to open the audio file in a new tab.</p>
+                </div>
+                <a href="https://1drv.ms/u/c/f7a325f56fbe0245/IQDyMg0gBBnCRa04eFMQ7WSkATWZVcLeXmmXbTphUrDRX6c?e=rHpQuU" target="_blank" class="btn-listen">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Open Section 3 Audio
+                </a>
+            </div>
+
+            <p class="italic mb-4 text-slate-600 font-medium bg-slate-100 p-2 rounded">Questions 21-26: Choose the correct letter, A, B or C.</p>
+            
+            <div class="space-y-6">
+                <div class="question-block">
+                    <p class="question-text">21. Why did Leo choose instant coffee as the topic for his marketing report?</p>
+                    <div class="flex flex-col gap-2 ml-4 mt-2">
+                        <label class="cursor-pointer"><input type="radio" name="q21" value="A"> A. He found plenty of material on the topic.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q21" value="B"> B. He had some practical experience in the area.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q21" value="C"> C. He had an idea of a brand he wanted to target.</label>
+                        <span id="res21" class="feedback"></span>
+                    </div>
+                </div>
+                
+                <div class="question-block">
+                    <p class="question-text">22. Leo discovered that in Australia, recent technological developments</p>
+                    <div class="flex flex-col gap-2 ml-4 mt-2">
+                        <label class="cursor-pointer"><input type="radio" name="q22" value="A"> A. are producing less healthy types of instant coffee.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q22" value="B"> B. are reducing the demand for instant coffee.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q22" value="C"> C. are improving the quality of instant coffee.</label>
+                        <span id="res22" class="feedback"></span>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">23. What do the speakers agree about Leo's table of coffee products?</p>
+                    <div class="flex flex-col gap-2 ml-4 mt-2">
+                        <label class="cursor-pointer"><input type="radio" name="q23" value="A"> A. It needs more explanation in the text.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q23" value="B"> B. It is factually inaccurate in some places.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q23" value="C"> C. It would be best to put this in the appendix.</label>
+                        <span id="res23" class="feedback"></span>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">24. What do they decide about the description of Shaffers coffee as a market follower?</p>
+                    <div class="flex flex-col gap-2 ml-4 mt-2">
+                        <label class="cursor-pointer"><input type="radio" name="q24" value="A"> A. Leo needs to define his terms.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q24" value="B"> B. Leo needs to provide more evidence.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q24" value="C"> C. Leo needs to put it in a different section.</label>
+                        <span id="res24" class="feedback"></span>
+                    </div>
+                </div>
+
+                <div class="question-block">
+                    <p class="question-text">25. What does Anna say about originality in someone's first marketing report?</p>
+                    <div class="flex flex-col gap-2 ml-4 mt-2">
+                        <label class="cursor-pointer"><input type="radio" name="q25" value="A"> A. Clear analysis of data can be considered original.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q25" value="B"> B. Graphs and diagrams should be original, not copied.</label>
+                        <label class="cursor-pointer"><input type="radio" name="q25" value="C"> C. Reports should contain some original data collected by the student.</label>
+                        <span id="res25" class="feedback"></span>
+                    </div>
+                </div>
+
+                <div class="question-block border-b pb-4">
+                    <p class="question-text">26. What difference between his school assignments and this report has surprised Leo?</p>
+                    <div class="flex flex-col gap-2 ml-4 mt-2">
+                        <label class="cursor-pointer"><input type="radio" name="q26" value="A"> A. not knowing the criteria for getting a good mark</label>
+                        <label class="cursor-pointer"><input type="radio" name="q26" value="B"> B. being required to produce work without assistance</label>
+                        <label class="cursor-pointer"><input type="radio" name="q26" value="C"> C. having to do a great deal of research</label>
+                        <span id="res26" class="feedback"></span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="italic mt-8 mb-4 text-slate-600 font-medium bg-slate-100 p-2 rounded">Questions 27-30: Complete the notes below. Write ONE WORD ONLY for each answer.</p>
+            <div class="bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                <h3 class="title-styled mb-4 text-center">Notes on specific sections of marketing report</h3>
+                <ul class="space-y-4">
+                    <li><span class="question-text">Executive summary</span>: Give a brief overview including the 27. <input type="text" id="q27" class="w-40 px-1 text-center"> <span id="res27" class="feedback"></span></li>
+                    <li><span class="question-text">Problems</span>: Link each problem to a 28. <input type="text" id="q28" class="w-40 px-1 text-center"> which explains it <span id="res28" class="feedback"></span></li>
+                    <li><span class="question-text">Implementation</span>: 
+                        <ul class="list-disc ml-6 space-y-4 mb-8">
+                            <li>Practical solutions to problems.</li>
+                            <li>Include details such as participants, 29. <input type="text" id="q29" class="w-40 px-1 text-center"> and sequence. </li>
+                            <li>Section is often poorly done because of lack of 30. <input type="text" id="q30" class="w-40 px-1 text-center"> <span id="res29" class="feedback"></span> <span id="res30" class="feedback"></span></li></ul>
+                    <li><span class="question-text">Conclusion</span>:
+                    <ul class="list-disc ml-6 space-y-4 mb-8">
+                        <li>Don't use new material here.</li>
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION 4 -->
+        <section class="section-card">
+            <h2 class="section-title text-blue-700 mb-4 border-b pb-2 text-center md:text-left">SECTION 4 (Questions 31-40)</h2>
+            
+            <div class="audio-link-container flex-col sm:flex-row gap-4">
+                <div>
+                    <p class="font-bold text-blue-900">Section 4 Audio File</p>
+                    <p class="text-xs text-blue-600 italic">Click the button to open the audio file in a new tab.</p>
+                </div>
+                <a href="https://1drv.ms/u/c/f7a325f56fbe0245/IQDAXSxejZ4HR7yyZ0hR8g5LAXUmCO1zDAtzlERo75Cru5Y?e=VmhPdJ" target="_blank" class="btn-listen">
+                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Open Section 4 Audio
+                </a>
+            </div>
+
+            <p class="italic mb-4 text-slate-600 font-medium bg-slate-100 p-2 rounded">Complete the notes below. Write ONE WORD ONLY for each answer.</p>
+            <div class="bg-slate-50 p-6 rounded-lg border border-slate-200">
+                <h3 class="title-styled mb-4 text-center italic text-blue-800">Health benefits of dance</h3>
+                <p class="mb-4 font-semibold text-slate-700">Recent findings:</p>
+                <ul class="list-disc ml-6 space-y-3 mb-6">
+                    <li>All forms of dance produce various hormones associated with feelings of happiness.</li>
+                    <li>Dancing with others has a more positive impact than dancing alone.</li>
+                    <li>An experiment on university students suggested that dance increases (31) <input type="text" id="q31" class="w-32 px-1 text-center"> <span id="res31" class="feedback"></span>.</li>
+                    <li>For those with mental illness, dance could be used as a form of (32) <input type="text" id="q32" class="w-32 px-1 text-center"> <span id="res32" class="feedback"></span>.</li>
+                </ul>
+                
+                <p class="mb-4 font-semibold text-slate-700">Benefits of dance for older people:</p>
+                <ul class="list-disc ml-6 space-y-3 mb-6">
+                    <li>accessible for people with low levels of (33) <input type="text" id="q33" class="w-32 px-1 text-center"> <span id="res33" class="feedback"></span></li>
+                    <li>reduces the risk of heart disease</li>
+                    <li>better (34) <input type="text" id="q34" class="w-32 px-1 text-center"> reduces the risk of accidents <span id="res34" class="feedback"></span></li>
+                    <li>improves (35) <input type="text" id="q35" class="w-32 px-1 text-center"> function by making it work faster <span id="res35" class="feedback"></span></li>
+                    <li>improves participants' general well-being</li>
+                    <li>gives people more (36) <input type="text" id="q36" class="w-32 px-1 text-center"> to take exercise <span id="res36" class="feedback"></span></li>
+                    <li>can lessen the feeling of (37) <input type="text" id="q37" class="w-32 px-1 text-center">, very common in older people <span id="res37" class="feedback"></span></li>
+                </ul>
+
+                <p class="mb-4 font-semibold text-slate-700">Benefits of Zumba:</p>
+                <p class="mb-4 italic text-slate-600">A study at The University of Wisconsin showed that doing Zumba for 40 minutes uses up as many (38) <input type="text" id="q38" class="w-32 px-1 text-center"> as other quite intense forms of exercise <span id="res38" class="feedback"></span>.</p>
+                <p class="mb-2 font-semibold text-slate-700 italic">The American Journal of Health Behavior study showed that:</p>
+                <ul class="list-disc ml-6 space-y-3">
+                    <li>women suffering from (39) <input type="text" id="q39" class="w-32 px-1 text-center"> benefited from doing Zumba. <span id="res39" class="feedback"></span></li>
+                    <li>Zumba became a (40) <input type="text" id="q40" class="w-32 px-1 text-center"> for the participants. <span id="res40" class="feedback"></span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Submit Button -->
+        <div class="flex flex-col items-center gap-4 mt-10 border-t pt-10">
+            <button onclick="gradeTest()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-12 rounded-full shadow-lg transition duration-200 transform hover:scale-105">
+                Submit
+            </button>
+            <div id="finalScore" class="text-2xl font-bold text-gray-800 hidden mt-4 p-6 bg-white border-2 border-blue-200 rounded-xl shadow-inner text-center"></div>
+        </div>
+
+    </main>
+
+    <script>
+        const ANSWERS = {
+            q1: "age", q2: "21.50", q3: "2", q4: "parking", q5: "argentina", q6: "singing",
+            q7: "piano", q8: "1922", q9: "comedy", q10: "talk",
+            q11: "D", q12: "C", q13: "G", q14: "H", q15: "A", q16: "E",
+            "q17-18": ["A", "D"], "q19-20": ["A", "C"],
+            q21: "A", q22: "B", q23: "A", q24: "B", q25: "A", q26: "A", 
+            q27: "background", q28: "theory", q29: "cost", q30: "time",
+            q31: "creativity", q32: "therapy", q33: "fitness", q34: "balance", q35: "stone",
+            q36: "motivation", q37: "isolation", q38: "calories", q39: "obesity", q40: "habit"
+        };
+
+        const ALTERNATE_ANSWERS = {
+            q29: ["cost", "costs"]
+        };
+
+        function gradeTest() {
+            let score = 0;
+            const total = 40;
+
+            document.querySelectorAll('.feedback').forEach(el => {
+                el.innerHTML = '';
+                el.className = 'feedback';
+            });
+
+            for (let i = 1; i <= 40; i++) {
+                if ([17,18,19,20,21,22,23,24,25,26].includes(i)) continue;
+
+                let input = document.getElementById('q' + i);
+                if (!input) continue;
+
+                let userVal = input.value.trim().toLowerCase();
+                let correctVal = ANSWERS['q' + i].toLowerCase();
+                let display = document.getElementById('res' + i);
+
+                if (!display) continue;
+
+                let isCorrect = (userVal === correctVal);
+                if (!isCorrect && ALTERNATE_ANSWERS['q' + i]) {
+                    isCorrect = ALTERNATE_ANSWERS['q' + i].some(a => a.toLowerCase() === userVal);
+                }
+
+                if (isCorrect && userVal !== "") {
+                    display.innerHTML = "✓";
+                    display.className = "feedback correct";
+                    score++;
+                } else {
+                    display.innerHTML = `✗ (${ANSWERS['q'+i]})`;
+                    display.className = "feedback incorrect";
+                }
+            }
+
+            for (let i = 21; i <= 26; i++) {
+                let selected = document.querySelector(`input[name="q${i}"]:checked`);
+                let display = document.getElementById('res' + i);
+                
+                if (!display) continue;
+
+                if (selected && selected.value === ANSWERS['q' + i]) {
+                    display.innerHTML = "✓ Correct";
+                    display.className = "feedback correct";
+                    score++;
+                } else {
+                    display.innerHTML = `✗ Key: ${ANSWERS['q' + i]}`;
+                    display.className = "feedback incorrect";
+                }
+            }
+
+            [['q17-18', 17], ['q19-20', 19]].forEach(([key, baseIdx]) => {
+                let selected = Array.from(document.querySelectorAll(`input[name="${key}"]:checked`)).map(cb => cb.value);
+                let correctOnes = ANSWERS[key];
+                let display = document.getElementById('res' + key);
+
+                if (!display) return;
+
+                let matches = selected.filter(val => correctOnes.includes(val)).length;
+                score += matches;
+
+                if (matches === 2) {
+                    display.innerHTML = "✓ Perfect";
+                    display.className = "feedback correct";
+                } else if (matches === 1) {
+                    display.innerHTML = `! Correct 1/2 (${correctOnes.join(', ')})`;
+                    display.className = "feedback text-yellow-600 font-bold";
+                } else {
+                    display.innerHTML = `✗ Key: ${correctOnes.join(', ')}`;
+                    display.className = "feedback incorrect";
+                }
+            });
+
+            const scoreDiv = document.getElementById('finalScore');
+            if (scoreDiv) {
+                scoreDiv.innerHTML = `Result: <span class="text-blue-600 text-3xl block my-2">${score}/${total}</span> (Estimated IELTS Band: ${calculateBand(score)})`;
+                scoreDiv.classList.remove('hidden');
+                scoreDiv.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        function calculateBand(score) {
+            if (score >= 39) return "9.0";
+            if (score >= 37) return "8.5";
+            if (score >= 35) return "8.0";
+            if (score >= 32) return "7.5";
+            if (score >= 30) return "7.0";
+            if (score >= 26) return "6.5";
+            if (score >= 23) return "6.0";
+            if (score >= 20) return "5.5";
+            if (score >= 16) return "5.0";
+            if (score >= 13) return "4.5";
+            if (score >= 10) return "4.0";
+            if (score >= 6) return "3.5";
+            if (score >= 4) return "3.0";
+            if (score >= 2) return "2.5";
+            return "0.0";
+        }
+    </script>
+</body>
+</html>
